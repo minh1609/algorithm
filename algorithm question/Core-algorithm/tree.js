@@ -54,4 +54,22 @@ class Tree {
     }
 
     remove(value) {}
+
+    breadthFirstSearch() {
+        let currentNode = this.root;
+        let list = []; //result
+        let queue = []; //hold value of node in under level
+        queue.push(currentNode);
+        while (queue.length > 0) {
+            currentNode = queue.shift();
+            list.push(currentNode.value);
+            if (currentNode.left) {
+                queue.push(currentNode.left);
+            }
+            if (currentNode.right) {
+                queue.push(currentNode.right);
+            }
+        }
+        return list;
+    }
 }

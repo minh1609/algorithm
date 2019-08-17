@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            div {
+                border-style: solid;
+                border-width: 1px;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .div1 {
+                background-color: blue;
+            }
+
+            .div2 {
+                background-color: orange;
+            }
+
+            .div3 {
+                background-color: orange;
+            }
+        </style>
+
+        <script>
+            function handleClick(event) {
+                alert(event);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="div1" onclick="handleClick()">
+            div1
+            <div class="div2" onclick="handleClick()">
+                div2
+                <div class="div3" onclick="handleClick()">div3</div>
+            </div>
+        </div>
+    </body>
+</html>
